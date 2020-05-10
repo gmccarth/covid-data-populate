@@ -1,6 +1,7 @@
 package com.redhat;
 
 import java.text.ParseException;
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -47,7 +48,7 @@ public class JhuCsseDailyReportCsvRecord {
 //	    @DataField(pos = 5)
 //	    private int deaths;
 	    
-	    private Date reportDate;
+	    private LocalDate reportDate;
 
 	    public String getAdmin2() {
 	      return admin2;
@@ -98,11 +99,11 @@ public class JhuCsseDailyReportCsvRecord {
 	      this.deaths = deaths;
 	    }
 	    
-	    public Date getReportDate() throws ParseException {
+	    public LocalDate getReportDate() throws ParseException {
 			return reportDate;
 		}
 
-		public void setReportDate(Date reportDate) {
+		public void setReportDate(LocalDate reportDate) {
 			this.reportDate = reportDate;
 		}
 
